@@ -7,3 +7,13 @@
 build/
 .vscode/
 .claude/settings.local.json
+skill.md
+PROGRESS.md
+PLAN.md
+CLAUDE.md
+.claude
+*.ii
+*.s
+*.a
+*.so
+*.dll
