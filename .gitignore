@@ -1,0 +1,9 @@
+*.exe
+*.o
+*.obj
+*.out
+*.pdb
+*.ilk
+build/
+.vscode/
+.claude/settings.local.json
