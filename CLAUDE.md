@@ -37,3 +37,5 @@ Phase folder names come from PLAN.md. Create a day folder only on the day it is 
 - After each day's material is generated (and PROGRESS.md updated), **automatically commit and push** to GitHub with the message `Day NN: <topic>`. The user has pre-approved this push.
 - Before generating a new day, also commit any uncommitted work the user did on earlier days (`Day NN: my implementation`).
 - Never force-push. Never commit build outputs (see .gitignore).
+- **No attribution of any kind.** Never add `Co-Authored-By: Claude` or other Claude/AI trailers to commit messages. The user must be the only contributor.
+- CLAUDE.md, PLAN.md, PROGRESS.md, skill.md and .claude/ are git-ignored on purpose (local only). Don't stage them.

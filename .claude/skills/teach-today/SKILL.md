@@ -11,7 +11,7 @@ description: Teach the next day of the 90-day C++ Quant/HFT plan. Use when the u
 2. Read the row for Day N in `PLAN.md` to get the topic, the build target and the phase folder.
 3. Check the relevant section of `skill.md` for the full sub-topic list of that area.
 4. Look at the previous day's folder. If the user changed `impl.cpp` (check `git status`/`git diff`), review it briefly: 3–6 bullets on bugs, UB, missed edge cases and performance. Then commit it:
-   `git add -A && git commit -m "Day <N-1>: my implementation"` (skip this if nothing changed).
+   `git add <previous day folder> && git commit -m "Day <N-1>: my implementation"` (no attribution trailer) (skip this if nothing changed).
 
 ## 2. Generate the lesson
 Create `<phase folder>/dayNN_<short_snake_topic>/` (zero-padded NN) with:
@@ -51,11 +51,13 @@ Fit the scope to 60–90 minutes. Depth beats breadth. Use the user's Quant/HFT 
 
 ## 4. Commit & push (pre-approved by the user)
 ```
-git add -A
+git add <phase folder>/dayNN_<topic>/ .gitignore
 git commit -m "Day NN: <topic>"
 git push
 ```
 - If there is no remote or the push fails, report it clearly with the error and keep the local commit. Never force-push.
+- The commit message is ONLY `Day NN: <topic>`. **Never add a `Co-Authored-By: Claude` trailer or any other attribution.** The user wants to be the sole contributor.
+- Stage only the day folder (and `.gitignore` if changed). CLAUDE.md, PLAN.md, PROGRESS.md, skill.md and .claude/ are git-ignored on purpose.
 
 ## 5. Reply in chat
 Keep it short: the day number and topic, the folder link, what to implement, the build command and the push status. Don't paste the whole README into chat.
